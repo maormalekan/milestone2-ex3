@@ -24,6 +24,7 @@ Point** generate(Point center,int R, size_t size){
 
 
 int main(){
+	// Circle c= getCircleFrom3({0,1},{5,4},{1,0});
 	srand (time(NULL));
 	const size_t N=250;
 	float R=10+rand()%1000;
