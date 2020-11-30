@@ -108,7 +108,7 @@ Circle getCircleFrom3(const Point& p1, const Point& p2, const Point& p3){
 	Point middle1={(p1.x+p2.x)/2,(p1.y+p2.y)/2};
 	// y-middle1.y=m(x-middle1.x)--> y=mx-m*middle1.x+middle1.y
 	float b1=mVertical1*-1*middle1.x +middle1.y;
-	// vertical line to the line of p1 and p2
+        // vertical line to the middle of the line of p1 and p2
 	Line vertical1(mVertical1,b1);
 	float m2=(p3.y-p1.y)/(p3.x-p1.x);
 	// y-y1=m(x-x1) -->y=mx-mx1+y1
@@ -119,7 +119,7 @@ Circle getCircleFrom3(const Point& p1, const Point& p2, const Point& p3){
 	Point middle2={(p1.x+p3.x)/2,(p1.y+p3.y)/2};
 	// y-middle2.y=m(x-middle2.x)--> y=mx-m*middle2.x+middle2.y
 	float b2= mVertical2*-1*middle2.x+middle2.y;
-	// vertical line to the line of p1 and p3
+        // vertical line to the middle of the line of p1 and p3
 	Line vertical2(mVertical2,b2);
 	// finding the center of the circle
 	Point center=vertical1.intersection(vertical2);
